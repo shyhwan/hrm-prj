@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UserDao {
+public class UserDTO {
 
     private String userId;  // 사원번호
     private String userName;  // 이름
