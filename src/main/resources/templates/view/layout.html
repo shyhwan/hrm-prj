@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="kr">
+<meta charset="UTF-8">
+<title>Title</title>
+<body th:fragment="layout">
+    <header th:insert="view/fragments/header :: header"></header>
+    <section th:insert="view/fragments/leftMenu :: leftMenu"></section>
+    <main th:insert=":: content"></main>
+    <section th:insert="view/fragments/rightMenu :: rightMenu"></section>
+    <footer th:insert="view/fragments/footer :: footer"></footer>
+</body>
+</html>

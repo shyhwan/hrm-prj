@@ -14,6 +14,6 @@ public class MainController {
         model.addAttribute("username", "테스터");
         model.addAttribute("currentTime", LocalDateTime.now().toString());
 
-        return "/main/main";
+        return "view/layout";
     }
 }
