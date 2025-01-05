@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>USER</title>
+</head>
+<body>
+<!--  <ul>
+    <li th:each="user : ${userList}" th:text="${user.userName}"></li>
+  </ul>-->
+  <table border="1">
+    <thead>
+    <tr>
+      <th>User ID</th>
+      <th>User Name</th>
+      <th>Team</th>
+      <th>Role</th>
+      <th>Position</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+      <th>Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${userList}">
+      <td th:text="${user.userId}"></td>
+      <td th:text="${user.userName}"></td>
+      <td th:text="${user.team}"></td>
+      <td th:text="${user.role}"></td>
+      <td th:text="${user.position}"></td>
+      <td th:text="${user.phoneNumber}"></td>
+      <td th:text="${user.email}"></td>
+      <td th:text="${user.address}"></td>
+    </tr>
+    </tbody>
+  </table>
+</body>
+</html>

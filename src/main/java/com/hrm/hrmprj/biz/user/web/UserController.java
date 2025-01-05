@@ -5,14 +5,16 @@ import com.hrm.hrmprj.common.dto.UserDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
 @Slf4j
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/com/user")
+@RequestMapping("/biz/user")
 public class UserController {
 
     private final UserService userService;
@@ -24,10 +26,14 @@ public class UserController {
         return ResponseEntity.ok(userDTO);
     }
 
-    @GetMapping
-    public ResponseEntity<List<UserDTO>> getAllUsers() {
-        List<UserDTO> userDTOList = userService.getAllUsers();
-        return ResponseEntity.ok(userDTOList);
+    @GetMapping("/userList")
+    public ModelAndView getAllUsers(Model model) {
+        List<UserDTO> userList = userService.getAllUsers();
+        log.debug("userList :: {}", userList.toString());
+        ModelAndView modelAndView = new ModelAndView("user/userList");
+        modelAndView.addObject("userList", userList);
+//        return ResponseEntity.ok(userDTOList);
+        return modelAndView;
     }
 
     @PostMapping
