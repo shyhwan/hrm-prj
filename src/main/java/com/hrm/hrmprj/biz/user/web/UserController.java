@@ -28,12 +28,16 @@ public class UserController {
 
     @GetMapping("/userList")
     public ModelAndView getAllUsers(Model model) {
+        ModelAndView mav = new ModelAndView("layout");
+
         List<UserDTO> userList = userService.getAllUsers();
         log.debug("userList :: {}", userList.toString());
-        ModelAndView modelAndView = new ModelAndView("user/userList");
-        modelAndView.addObject("userList", userList);
+//        ModelAndView mav = new ModelAndView("user/userList");
+
+        mav.addObject("viewName", "fragments/user/userList");
+        mav.addObject("userList", userList);
 //        return ResponseEntity.ok(userDTOList);
-        return modelAndView;
+        return mav;
     }
 
     @PostMapping

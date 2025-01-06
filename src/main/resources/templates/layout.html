@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="kr">
-<meta charset="UTF-8">
-<title>Title</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
 <body>
+    <!-- Header Area -->
     <header th:insert="fragments/header :: header"></header>
-    <section th:insert="fragments/leftMenu :: leftMenu"></section>
-<!--    <main th:insert=":: content"></main>-->
-    <section th:insert="fragments/rightMenu :: rightMenu"></section>
+
+    <!-- Main Area -->
+    <section>
+        <!-- Left Menu -->
+        <aside th:insert="fragments/leftMenu :: leftMenu"></aside>
+
+        <!-- Main Content -->
+        <!-- <main th:insert="fragments/main/main :: content"></main> -->
+        <main th:replace="${viewName} :: content"></main>
+
+        <!-- Right Quick Menu -->
+        <aside th:insert="fragments/rightMenu :: rightMenu"></aside>
+    </section>
+
+    <!-- Footer Area -->
     <footer th:insert="fragments/footer :: footer"></footer>
 </body>
 </html>
