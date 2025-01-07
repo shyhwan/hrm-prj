@@ -2,28 +2,35 @@
 
 /* variable */
 :root {
-    --main-width-size: 76rem;             /* main area size */
+    --main-width-size: 76rem;              /* main area size */
+    --global-bg-color: #888888;            /* global background color */
 }
 
 /* layout */
-body { width: 100vw; display: flex; justify-content: center;}
-body > header { width: 100%; height: 10rem; position: fixed; top: 0; border: 1px solid lightgray; display: block; }
-body > section { /*width: 100%;*/ width: var(--main-width-size); margin-top: 11rem; display: flex; justify-content: space-between; align-items: start}
+body { width: 100vw; display: flex; justify-content: start; }
+body > header { width: 100%; height: 5rem; position: fixed; top: 0; border: 1px solid lightgray; display: block; }
+body > section { /*width: 100%;*/ width: var(--main-width-size); margin-top: 5rem; display: flex; justify-content: start; align-items: start}
 body > section > aside { width: 13rem; height: 20rem; border: 1px solid lightgray}
-body > footer { width: 100%; height: 10rem; position: fixed; bottom: 0; border: 1px solid lightgray; }
+/*body > footer { width: 100%; height: 10rem; position: fixed; bottom: 0; border: 1px solid lightgray; }*/
 
 /* top menu */
-header > section { height: 6rem; padding: 1rem; display: flex; justify-content: space-between; box-sizing: border-box; }
+header > section { width: 100%; height: 6rem; padding: 1rem; display: flex; justify-content: space-between; box-sizing: border-box; }
+header > section > article { width: 20px; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; }
+header > section > form { height: 3rem; }
 header > nav > ul { height: 4rem; padding: 1rem; display: flex; justify-content: space-around; box-sizing: border-box; }
 header > nav > ul > li { border: 1px solid lightgray; }
 header > nav > ul > li > a { font-size: 2rem; font-weight: 600;  box-sizing: border-box; }
 
 /* left menu */
-body > section > aside:first-child { width: 15rem; height: 50rem; margin-left: 1rem; border: 1px solid lightgray}
+body > section > aside:first-child { width: 15rem; height: 100vh; padding-top: 1rem; border: 1px solid lightgray}
 
 /* right menu */
-body > section > aside:last-child { width: 5rem; height: 40rem; margin-right: 1rem; border: 1px solid lightgray}
+/* body > section > aside:last-child { width: 5rem; height: 40rem; margin-right: 1rem; border: 1px solid lightgray} */
 
 /* main content */
+body > section > section { width: 80%; padding: 1rem; }
 
 /* footer */
+
+/* img */
+#imgTopLogo { height: 3rem; }
