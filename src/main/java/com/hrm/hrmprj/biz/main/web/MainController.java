@@ -20,4 +20,12 @@ public class MainController {
 
         return mav;
     }
+
+    @GetMapping("/test")
+    public ModelAndView testPage(Model model) {
+        ModelAndView mav = new ModelAndView("layout");
+
+        mav.addObject("viewName", "fragments/main/test");
+        return mav;
+    }
 }
