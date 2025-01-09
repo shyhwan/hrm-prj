@@ -28,17 +28,23 @@
       <option value="B">BVVVVVVVVVV</option>
     </select>
     <form>
-      <input type="text" value="test text"/>
-      <input type="text" value="test text" readonly/>
-      <input type="text" value="test text" disabled/>
-      <input type="radio" />
-      <input type="checkbox" />
-      <input type="color" />
-      <input type="file" />
-      <input type="image" />
-      <input type="range" />
-      <input type="url" />
-      <input type="reset" />
+      <label for="readonly">readonly<input id="readonly" type="text" value="test text" readonly/></label>
+      <label for="disabled">disabled<input id="disabled" type="text" value="test text" disabled/></label>
+      <label for="text">text<input id="text" type="text" value="test text"/></label>
+      <label for="radio">radio<input id="radio" name="radio" type="radio" /></label>
+      <label for="radio1">radio<input id="radio1" name="radio" type="radio" /></label>
+      <label for="radio2">radio<input id="radio2" name="radio" type="radio" /></label>
+      <label for="radio3">radio<input id="radio3" name="radio" type="radio" disabled/></label>
+      <label for="checkbox">checkbox<input id="checkbox" name="checkbox" type="checkbox" /></label>
+      <label for="checkbox1">checkbox1<input id="checkbox1" name="checkbox" type="checkbox" /></label>
+      <label for="checkbox2">checkbox2<input id="checkbox2" name="checkbox" type="checkbox" /></label>
+      <label for="checkbox3">checkbox2<input id="checkbox3" name="checkbox" type="checkbox" disabled/></label>
+      <label for="color">color<input id="color" type="color" /></label>
+      <label for="file">file<input id="file" type="file" /></label>
+      <label for="image">image<input id="image" type="image" /></label>
+      <label for="range">range<input id="range" type="range" /></label>
+      <label for="url">url<input id="url" type="url" /></label>
+      <label for="reset">reset<input id="reset" type="reset" /></label><!-- FORM tag 데이터 초기화(삭제 아님) -->
       <a href="/link">link</a>
 
       <object>
@@ -59,6 +65,10 @@
 
       <progress>??</progress>
       <dialog></dialog>
+      <details>
+        <summary>Title</summary>
+        Content Area
+      </details>
     </form>
   </article>
 </section>
