@@ -39,6 +39,7 @@ input[type="checkbox"]:checked::after { content: ''; position: absolute; top: 0.
     height: 0.6rem; border: solid black; border-width: 0 2px 2px 0; transform: rotate(45deg);}
 
 input[type="color"] { padding: 0.1rem; }
+input[type="number"] {  }
 input[type="date"] {  }
 input[type="datetime-local"] {  }
 input[type="file"] { background-color: #ffffff; }
