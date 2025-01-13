@@ -5,6 +5,10 @@
 :root {
     --main-width-size: 76rem;              /* main area size */
     --global-bg-color: #888888;            /* global background color */
+    --mian-color: #93b470;
+    --sub-color: #f9ffde;
+    --mian-inner-color: #ffffff63;
+    --hover-color: #00000026;
 }
 
 /* layout */
@@ -15,15 +19,22 @@ body > section > aside { width: 13rem; height: 20rem; border: 1px solid lightgra
 /*body > footer { width: 100%; height: 10rem; position: fixed; bottom: 0; border: 1px solid lightgray; }*/
 
 /* top menu */
+header { background-color: var(--mian-color); box-sizing: border-box; }
 header > section { width: 100%; height: 6rem; padding: 1rem; display: flex; justify-content: space-between; box-sizing: border-box; }
 header > section > article { display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; }
 header > section > form { height: 3rem; }
+header > section > article > form input { background-color: var(--mian-inner-color); }
 header > nav > ul { height: 4rem; padding: 1rem; display: flex; justify-content: space-around; box-sizing: border-box; }
 header > nav > ul > li { border: 1px solid lightgray; }
 header > nav > ul > li > a { font-size: 2rem; font-weight: 600;  box-sizing: border-box; }
 
 /* left menu */
-body > section > aside:first-child { width: 15rem; height: 100vh;  position: fixed; top: 5rem; padding-top: 1rem; border: 1px solid lightgray}
+body > section > aside:first-child { width: 15rem; height: 100vh;  position: fixed; top: 5rem; padding-top: 1rem; border: 1px solid lightgray; background-color: var(--sub-color); }
+#navLeftMenu > ul > li { border-top: 1px solid lightgray; padding: 0.5rem; }
+#navLeftMenu > ul > li:last-child { border-bottom: 1px solid lightgray; }
+#navLeftMenu > ul > li > ul { padding-left: 0.5rem; }
+#navLeftMenu > ul > li > ul > li { height: 2rem; padding: 0.8rem 0 0 0.4rem; display: flex; align-items: center; }
+#navLeftMenu > ul > li > ul > li:hover { background-color: var(--hover-color); }
 
 /* right menu */
 /* body > section > aside:last-child { width: 5rem; height: 40rem; margin-right: 1rem; border: 1px solid lightgray} */
