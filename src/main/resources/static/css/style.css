@@ -31,9 +31,13 @@ header > nav > ul > li > a { font-size: 2rem; font-weight: 600;  box-sizing: bor
 /* left menu */
 body > section > aside:first-child { width: 15rem; height: 100vh;  position: fixed; top: 5rem; padding-top: 1rem; border: 1px solid lightgray; background-color: var(--sub-color); }
 #navLeftMenu > ul > li { border-top: 1px solid lightgray; padding: 0.5rem; }
+#navLeftMenu > ul > li > a { position: relative; padding-left: 1rem;}
+#navLeftMenu > ul > li > a:after { content: ""; width: 0.5rem; height: 0.5rem; position: absolute; top: 50%; left: 0; display: inline-block; border-top: 1.5px solid black; border-left: 1.5px solid black; rotate: 45deg; }
+#navLeftMenu > ul > li > a:focus + ul { opacity: 1; max-height: 10rem; }
+#navLeftMenu > ul > li > a:focus::after { rotate: -135deg; top: 30%; }
 #navLeftMenu > ul > li:last-child { border-bottom: 1px solid lightgray; }
-#navLeftMenu > ul > li > ul { padding-left: 0.5rem; }
-#navLeftMenu > ul > li > ul > li { height: 2rem; padding: 0.8rem 0 0 0.4rem; display: flex; align-items: center; }
+#navLeftMenu > ul > li > ul { padding-left: 0.5rem; max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;}
+#navLeftMenu > ul > li > ul > li { height: 2rem; margin: 0.4rem 0 0 0; padding: 0 0 0 0.4rem; display: flex; align-items: center; }
 #navLeftMenu > ul > li > ul > li:hover { background-color: var(--hover-color); }
 
 /* right menu */
