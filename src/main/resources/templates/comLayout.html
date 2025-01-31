@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Common</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <!-- Main Area -->
+    <section>
+        <!-- Main Content -->
+        <main th:replace="${viewName} :: content"></main>
+    </section>
+</body>
+</html>
